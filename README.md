@@ -21,7 +21,7 @@ The intention is for you to build a framework on top either in node.js or in the
 #### node Node = Routington()
 
 ```js
-var routington = require('routington')
+var routington = require('routington2')
 var router = routington()
 ```
 
