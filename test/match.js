@@ -123,4 +123,17 @@ describe('Route matching', function () {
       router.match('/page/%%%')
     })
   })
+
+  it('should match all the rest of url at the last regex or named parameter', function() {
+    var router = routington()
+
+    router.define('/page/:rest')
+    router.define('/asdf/:rest([\\d\\/]+)')
+
+    router.match('/page/a').should.be.ok
+    router.match('/page/a/b/c').should.be.ok
+
+    router.match('/asdf/34/23').should.be.ok
+    should.not.exists(router.match('/asdf/a/b'))
+  })
 })

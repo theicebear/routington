@@ -1,14 +1,12 @@
-## Routington
+## Routington2
 
 [![NPM version][npm-image]][npm-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
-[![Dependency Status][david-image]][david-url]
 [![License][license-image]][license-url]
-[![Downloads][downloads-image]][downloads-url]
-[![Gittip][gittip-image]][gittip-url]
 
-Routington is a [trie](http://en.wikipedia.org/wiki/Trie)-based URL router.
+Routington2 is a fork of [Routington](https://github.com/theicebear/routington),
+a [trie](http://en.wikipedia.org/wiki/Trie)-based URL router.
 Its goal is only to define and match URLs.
 It does not handle methods, headers, controllers, views, etc., in anyway.
 It is faster than traditional, linear, regular expression-matching routers, although insignficantly,
@@ -17,11 +15,6 @@ and scales with the number of routes.
 The purpose of this router isn't for performance,
 but to bring more structure to URL routing.
 The intention is for you to build a framework on top either in node.js or in the browser.
-
-Implementations:
-
-  - [koa-trie-router](https://github.com/koajs/trie-router) - for [koa](https://github.com/koajs)
-  - [wayfarer](https://github.com/yoshuawuyts/wayfarer)
 
 ### API
 
@@ -166,19 +159,11 @@ req.label = match.node.label
 
 IE9+
 
-[npm-image]: https://img.shields.io/npm/v/routington.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/routington
-[github-tag]: http://img.shields.io/github/tag/pillarjs/routington.svg?style=flat-square
-[github-url]: https://github.com/pillarjs/routington/tags
-[travis-image]: https://img.shields.io/travis/pillarjs/routington.svg?style=flat-square
-[travis-url]: https://travis-ci.org/pillarjs/routington
-[coveralls-image]: https://img.shields.io/coveralls/pillarjs/routington.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/pillarjs/routington?branch=master
-[david-image]: http://img.shields.io/david/pillarjs/routington.svg?style=flat-square
-[david-url]: https://david-dm.org/pillarjs/routington
-[license-image]: http://img.shields.io/npm/l/routington.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/routington2.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/routington2
+[travis-image]: https://img.shields.io/travis/theicebear/routington.svg?style=flat-square
+[travis-url]: https://travis-ci.org/theicebear/routington
+[coveralls-image]: https://img.shields.io/coveralls/theicebear/routington.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/theicebear/routington?branch=master
+[license-image]: http://img.shields.io/npm/l/routington2.svg?style=flat-square
 [license-url]: LICENSE.md
-[downloads-image]: http://img.shields.io/npm/dm/routington.svg?style=flat-square
-[downloads-url]: https://npmjs.org/package/routington
-[gittip-image]: https://img.shields.io/gittip/jonathanong.svg?style=flat-square
-[gittip-url]: https://www.gittip.com/jonathanong/

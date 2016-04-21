@@ -1,5 +1,5 @@
 {
-  "name": "routington",
+  "name": "routington2",
   "description": "Trie-based URL Routing",
   "version": "1.0.3",
   "dependencies": {
@@ -18,13 +18,10 @@
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --require should",
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot --require should"
   },
-  "author": {
-    "name": "Jonathan Ong",
-    "email": "me@jongleberry.com",
-    "url": "http://jongleberry.com",
-    "twitter": "https://twitter.com/jongleberry"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theicebear/routington.git"
   },
-  "repository": "pillarjs/routington",
   "license": "MIT",
   "main": "lib",
   "files": [
