@@ -124,16 +124,16 @@ describe('Route matching', function () {
     })
   })
 
-  it('should match all the rest of url at the last regex or named parameter', function() {
+  it('should match all the rest of url at the last `**`', function() {
     var router = routington()
 
-    router.define('/page/:rest')
-    router.define('/asdf/:rest([\\d\\/]+)')
+    router.define('/page/**')
+    router.define('/asdf/**/b')
 
     router.match('/page/a').should.be.ok
     router.match('/page/a/b/c').should.be.ok
+    router.match('/page/a/b/c').param[0].should.eql('a/b/c')
 
-    router.match('/asdf/34/23').should.be.ok
     should.not.exists(router.match('/asdf/a/b'))
   })
 })
