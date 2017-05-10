@@ -133,6 +133,7 @@ describe('Route matching', function () {
     router.match('/page/a').should.be.ok
     router.match('/page/a/b/c').should.be.ok
     router.match('/page/a/b/c').param[0].should.eql('a/b/c')
+    router.match('/page/a').param[0].should.eql('a')
 
     should.not.exists(router.match('/asdf/a/b'))
   })
